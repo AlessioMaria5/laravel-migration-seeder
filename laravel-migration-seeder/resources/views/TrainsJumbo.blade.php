@@ -1,5 +1,5 @@
 <div class="myTrainRow">
-    @foreach ($trains as $train)
+    @foreach ($mytrains as $train)
     <span>{{$train->azienda}}</span> 
     -
     <span>{{$train->stazione_partenza}}</span> 

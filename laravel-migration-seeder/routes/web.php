@@ -13,4 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'TrainController@index')->name('JumboTrains');
+Route::get('/', 'seedTrainController@index')->name('JumboTrains');
