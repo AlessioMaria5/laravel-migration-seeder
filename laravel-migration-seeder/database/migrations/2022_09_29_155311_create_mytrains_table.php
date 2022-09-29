@@ -13,7 +13,7 @@ class CreateMytrainsTable extends Migration
      */
     public function up()
     {
-        Schema::create('mytrains', function (Blueprint $table) {
+        Schema::create('seed_trains', function (Blueprint $table) {
             $table->id();
             $table->string('azienda',100);
             $table->string('stazione_partenza',100);
