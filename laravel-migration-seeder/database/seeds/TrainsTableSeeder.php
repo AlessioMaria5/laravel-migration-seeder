@@ -15,7 +15,7 @@ class TrainsTableSeeder extends Seeder
         $faker = \Faker\Factory::create('it_IT');
         
 
-        for ( $i = 0 ; $i<25 ; $i++){
+        for ( $i = 0 ; $i<100; $i++){
 
             $newTrain = new SeedTrain();
             $newTrain->azienda = 'Trenitalia';
@@ -26,16 +26,11 @@ class TrainsTableSeeder extends Seeder
             $orarioPartenza = $newTrain->orario_partenza = $faker-> time();
             $newTrain->orario_arrivo = $faker -> time();
 
-            $newTrain->codice_treno = $faker-> randomDigit(5);
+            $newTrain->codice_treno = $faker-> randomElement(['RG','FC','FA']).random_int(100,7000);
             $newTrain->numero_carrozze = rand(2,15);
 
             $inOrario = $newTrain->in_orario = rand(0,1);
             $newTrain->cancellato = $inOrario?0:1;
-
-           
-            
-            
-            
             $newTrain->save();
         }
     }

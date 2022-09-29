@@ -1,6 +1,6 @@
 body {
   background-image: url("https://img.freepik.com/free-vector/railway-transport-orthogonal-illustration_1284-36071.jpg?w=1380&t=st=1664484244~exp=1664484844~hmac=5d37e060707b8000023048cb89d83cbedff9dcf990c2a4c1fccc4c9695ab47c4");
-  background-size: cover;
+  background-size: contain;
 }
 
 .myTrainRow {
@@ -13,6 +13,10 @@ body {
   border-radius: 25px;
   margin-top: 50px;
   box-shadow: 5px 10px 10px;
+}
+
+.myTrainRow .title {
+  margin-bottom: 20px;
 }
 
 .myTrainRow .row {

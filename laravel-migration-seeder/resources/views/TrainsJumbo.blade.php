@@ -10,16 +10,29 @@
 </head>
 <body>
 <div class="myTrainRow">
+
+
+    <div class='row title'>Azienda</div> 
+    <div class='row orario title'>Arriva a</div> 
+    <div class='row orario title'>Parte per</div> 
+    <div class='row title'>Orario Partenza</div> 
+    <div class='row title'>Orario Arrivo</div> 
+    <div class='row title'>CD TRENO</div> 
+    <div class='row title'>Carrozze</div>
+    <div class='row title'>Stato</div>
+    <div class='row title'></div>
+
+
     @foreach ($mytrains as $train)
-    <div id='azienda' class='row'>{{$train->azienda}}</div> 
-    <div id='partenza' class='row orario'>{{$train->stazione_partenza}}</div> 
-    <div id='arrivo' class='row orario'>{{$train->stazione_arrivo}}</div> 
-    <div id='orarioPartenza' class='row'>{{$train->orario_partenza}}</div> 
-    <div id='orarioArrivo' class='row'>{{$train->orario_arrivo}}</div> 
-    <div id='codiceTreno' class='row'>{{$train->codice_treno}}</div> 
-    <div id='carrozze' class='row'>{{$train->numero_carrozze}}</div>
+    <div class='row'>{{$train->azienda}}</div> 
+    <div class='row orario'>{{$train->stazione_partenza}}</div> 
+    <div class='row orario'>{{$train->stazione_arrivo}}</div> 
+    <div class='row'>{{$train->orario_partenza}}</div> 
+    <div class='row'>{{$train->orario_arrivo}}</div> 
+    <div class='row'>{{$train->codice_treno}}</div> 
+    <div class='row'>{{$train->numero_carrozze}}</div>
     @if ($train->in_orario == 1)
-    <div id='in_orario' class='row'>Puntuale</div>
+    <div class='row'>Puntuale</div>
     @else
     
     @endif
