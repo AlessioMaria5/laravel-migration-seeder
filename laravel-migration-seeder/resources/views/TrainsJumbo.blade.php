@@ -28,8 +28,17 @@
     @else
    
     @endif
-
+    
+    @if (date('H:i') < $train->orario_partenza and !($train->cancellato == 1))
+    <div class="row">
+        <span class="circle-left">◉</span>
+        <span class="circle-right">◉</span>
+    </div>
+    @else 
+    <div class="row"></div>
+    @endif
     @endforeach
+    
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" integrity="sha512-v/wOVTkoU7mXEJC3hXnw9AA6v32qzpknvuUF6J2Lbkasxaxn2nYcl+HGB7fr/kChGfCqubVr1n2sq1UFu3Gh1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

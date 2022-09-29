@@ -32,6 +32,8 @@ class TrainsTableSeeder extends Seeder
             $inOrario = $newTrain->in_orario = rand(0,1);
             $newTrain->cancellato = $inOrario?0:1;
 
+           
+            
             
             
             $newTrain->save();

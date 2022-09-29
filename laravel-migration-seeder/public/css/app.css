@@ -8,7 +8,7 @@ body {
   flex-wrap: wrap;
   background-color: rgb(33, 33, 33);
   margin: auto;
-  width: 80%;
+  max-width: 80%;
   padding: 30px 20px 20px 20px;
   border-radius: 25px;
   margin-top: 50px;
@@ -16,7 +16,8 @@ body {
 }
 
 .myTrainRow .row {
-  width: 11.25%;
+  min-width: 9.0909090909%;
+  max-width: 9.0909090909%;
   padding: 5px;
   padding-right: 0px;
   margin-right: 10px;
@@ -26,5 +27,47 @@ body {
   color: rgb(255, 166, 0);
   text-shadow: 0px 0px 10px rgb(255, 166, 0);
   font-family: "DS-Digital", sans-serif;
+}
+
+.myTrainRow .circle-left {
+  animation: myAnimation 2s infinite;
+}
+
+@keyframes myAnimation {
+  0% {
+    color: rgb(73, 73, 73);
+    text-shadow: 0px 0px 0px;
+  }
+
+  50% {
+    color: rgb(255, 166, 0);
+    text-shadow: 0px 0px 10px;
+  }
+
+  100% {
+    color: rgb(73, 73, 73);
+    text-shadow: 0px 0px 0px;
+  }
+}
+
+.myTrainRow .circle-right {
+  animation: myAnimation2 2s infinite;
+}
+
+@keyframes myAnimation2 {
+  0% {
+    color: rgb(255, 166, 0);
+    text-shadow: 0px 0px 10px;
+  }
+
+  50% {
+    color: rgb(73, 73, 73);
+    text-shadow: 0px 0px 0px;
+  }
+
+  100% {
+    color: rgb(255, 166, 0);
+    text-shadow: 0px 0px 10px;
+  }
 }
 
