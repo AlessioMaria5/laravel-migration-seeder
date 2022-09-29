@@ -19,14 +19,20 @@ class TrainsTableSeeder extends Seeder
 
             $newTrain = new SeedTrain();
             $newTrain->azienda = 'Trenitalia';
-            $newTrain->stazione_partenza = $faker->city();
-            $newTrain->stazione_arrivo = $faker-> city();
-            $newTrain->orario_partenza = $faker-> time();
+
+            $stazionePartenza = $newTrain->stazione_partenza = $faker->city();
+            $stazioneArrivo = $newTrain->stazione_arrivo = $faker-> city();
+            
+            $orarioPartenza = $newTrain->orario_partenza = $faker-> time();
             $newTrain->orario_arrivo = $faker -> time();
+
             $newTrain->codice_treno = $faker-> randomDigit(5);
             $newTrain->numero_carrozze = rand(2,15);
-            $newTrain->in_orario = rand(0,1);
-            $newTrain->cancellato = rand(0,1);
+
+            $inOrario = $newTrain->in_orario = rand(0,1);
+            $newTrain->cancellato = $inOrario?0:1;
+
+            
             
             $newTrain->save();
         }
