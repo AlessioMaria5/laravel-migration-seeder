@@ -8,18 +8,21 @@ body {
 
     display: flex;
     flex-wrap: wrap;
-    background-color:rgb(33,33,33) ;
     margin: auto;
     max-width: 80%;
+
+    background-color: #131313;
+    opacity: 1;
+    background-image:  linear-gradient(135deg, #2d2d2d 25%, transparent 25%), linear-gradient(225deg, #2d2d2d 25%, transparent 25%), linear-gradient(45deg, #2d2d2d 25%, transparent 25%), linear-gradient(315deg, #2d2d2d 25%, #151515 25%);
+    background-position:  10px 0, 10px 0, 0 0, 0 0;
+    background-size: 3px 3px;
+    background-repeat: repeat;  
     
     padding: 30px 20px 20px 20px;
     border-radius: 25px;
     margin-top: 50px;
     box-shadow: 5px 10px 10px;
         
-    .title {
-        margin-bottom: 20px;
-    }
     .row {
 
         min-width: calc(100% / 11);
@@ -73,6 +76,14 @@ body {
         100% {color: rgb(255,166,0);
             text-shadow: 0px 0px 10px;
         }
+    }
+
+    .title {
+        margin-bottom: 20px;
+        color:white;
+        font-family: 'Times New Roman', Times, serif;
+        text-shadow: none;
+        
     }
 
 }
